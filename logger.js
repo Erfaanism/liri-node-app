@@ -23,9 +23,18 @@ var addLog = (logtype, result) => {
         result
     };
 
-    allLogs.push(log.result);
+    allLogs.push(log);
     saveLog(allLogs);
-    return log.result;
+    if (log.logtype === 'Twitter') {
+        let twitterReturn = '';
+        for (let i = 0; i < log.result.length; i++) {
+            twitterReturn += '\n' + log.result[i];
+        }
+        return twitterReturn;
+    } else {
+        return log.result;
+    }
+
 };
 
 module.exports = {
