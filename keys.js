@@ -10,8 +10,8 @@ const twitterKeys = {
 const omdbKey = '40e9cece';
 
 const spotifyKeys = {
-    client_id: 'e264502c21c948f4b46d7e045d849e03',
-    client_secret: '3041330b854f4999ba1e566997b0ce35'
+    id: 'e264502c21c948f4b46d7e045d849e03',
+    secret: '3041330b854f4999ba1e566997b0ce35'
 }
 module.exports = {
     twitterKeys,

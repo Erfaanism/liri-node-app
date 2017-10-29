@@ -14,11 +14,14 @@ var saveLog = (allLogs) => {
     fs.writeFileSync(logFile, JSON.stringify(allLogs));
 };
 
-var addLog = (result) => {
+var addLog = (logtype, result) => {
 
     var allLogs = readLog();
 
-    var log = { result };
+    var log = {
+        logtype,
+        result
+    };
 
     allLogs.push(log.result);
     saveLog(allLogs);
