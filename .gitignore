@@ -1,5 +1,9 @@
-.DS_Store
+# Project specific files
+log.txt
+# keys.js
 
+# My .gitignore template for node apps
+.DS_Store
 # Logs
 logs
 *.log
