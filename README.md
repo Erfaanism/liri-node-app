@@ -4,7 +4,7 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 
 LIRI will display the information on screen using `console.log()` and also saves the data and logtype to `log.txt`. If `log.txt` is not empty, it will append the information to the file. Please see `logger.js` for more information.
 
-### NPM packages
+### NPM and Node Modules
 
 * [Twitter](https://www.npmjs.com/package/twitter)
 * [Spotify](https://www.npmjs.com/package/node-spotify-api)
@@ -75,3 +75,5 @@ If the user doesn't type a movie in, the program will output data for the movie 
 Using the `fs` Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands. If you enter `do-what-it-says` inside random.txt, LIRI will give you and error and will not run the command.
 
 By default LIRI will run `spotify-this-song` for "I Want it That Way," as follows the text in `random.txt`.
+
+Have Fun!
