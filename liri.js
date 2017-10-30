@@ -13,25 +13,21 @@ const spotifyKeys = keys.spotifyKeys;
 const client = new twitter(twitterKeys);
 const spotifyApp = new spotify(spotifyKeys);
 
-var command = process.argv[2];
-var argument = '';
+let command = process.argv[2];
+let argument = '';
 
 if (process.argv[3]) {
     argument = process.argv[3];
 }
 
-var runApp = (cmd, arg) => {
+let runApp = (cmd, arg) => {
     switch (cmd) {
         case 'my-tweets':
-            let params = { screen_name: 'erfaanism2' };
+            let params = { screen_name: 'erfaanism2', count: 20 };
             client.get('statuses/user_timeline', params, (error, tweets, response) => {
                 if (!error) {
-                    let maxIndex = 20;
-                    if (tweets.length < 20) {
-                        maxIndex = tweets.length;
-                    };
                     let result = [];
-                    for (let index = 0; index < maxIndex; index++) {
+                    for (let index = 0; index < tweets.length; index++) {
                         let thisTweet = tweets[index];
                         result.push(`Tweet #${index + 1}:\nDate: ${thisTweet.created_at}\nTweet content: ${thisTweet.text}\n`)
                     }
